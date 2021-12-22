@@ -1,26 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec 22 11:59:50 2021
+Created on Wed Dec 22 12:27:19 2021
 
 @author: sjcet
 """
 
-#4. 100 students were asked what their primary mode of transport for getting to school was. The results of this survey are recorded in the table below. Construct a bar graph representing this information.
-
-#Create a bar graph with
-# X axis -mode of Transport and Y axis ‘frequency’
-# Provide appropriate labels and title
-# Width .1, color green
+#4. Display the above data using multiline plot( 3 different lines in same graph)
+# Display the description of the graph in upper right corner(use legend())
+# Use different colors and line styles for 3 different lines
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.title('Students transportation')
-plt.xlabel('Mode of Transport')
-plt.ylabel('Frequency')
+x = [1,2,3,4,5]
+y = [3,3,3,3,3]
+z = [4,4,4,4,4]
 
-x = np.array(['Walking','Cycling','Car','Bus','Train'])
-y = np.array([29,15,35,18,3])
-plt.bar(x, y, color="#4CAF50",width = 0.1)
+
+plt.plot(x, y, label='line 1')
+plt.plot(y, x, label='line 2')
+plt.plot(z, x, label='line 3')
+plt.legend()
 plt.show()
